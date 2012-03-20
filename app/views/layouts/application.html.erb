@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookShelf - 書籍管理システム</title>
+  <%= stylesheet_link_tag    "bootstrap" %>
+  <%= stylesheet_link_tag    "bootstrap-responsive" %>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render "shared/header" %>
+  <div class="container">
+    <%= yield %>
+    <%= render "shared/footer" %>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<%= form_for @book, :html => {:class => "well"} do |form| %>
+  <fieldset>
+    <div class="control-group">
+      <%= form.label :title, "タイトル:", :class => "control-label" %>
+      <%= form.text_field :title %>
+    </div>
+    <div class="control-group">
+      <%= form.label :author, "著者:", :class => "control-label" %>
+      <%= form.text_field :author %>
+    </div>
+    <div class="control-group">
+      <%= form.label :publish_year, "出版年数:", :class => "control-label" %>
+      <%= form.text_field :publish_year %>
+    </div>
+    <div class="control-group">
+      <%= form.label :checked_out, "貸出中", :class => "control-label" %>
+      <%= form.check_box :checked_out %><% form.label :checked_out, "貸出中" %>
+    </div>
+    <div class="control-group">
+      <%= form.label :comment, "コメント:", :class => "control-label" %>
+      <%= form.text_area :comment %>
+    <%= form.submit "登録", :class => "btn-primary" %>
+  </fieldset>
+<% end %>
